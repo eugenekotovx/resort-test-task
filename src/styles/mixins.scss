@@ -1,0 +1,11 @@
+@mixin main-text {
+  font-family: $main-font;
+  font-size: $main-font-size;
+  color: $main-color;
+}
+
+@mixin hover-style {
+  opacity: 0.7;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
