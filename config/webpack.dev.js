@@ -8,7 +8,7 @@ module.exports = merge(common, {
   mode: 'development',
   devServer: {
     historyApiFallback: true,
-    contentBase: paths.build,
+    contentBase: paths.src,
     open: true,
     compress: true,
     hot: true,

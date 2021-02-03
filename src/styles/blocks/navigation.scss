@@ -1,0 +1,376 @@
+.navigation {
+  &__header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 34px;
+    padding-bottom: 20px;
+    @include mobile {
+      padding-bottom: 16px;
+      height: 80px;
+      padding-top: 0;
+      padding-left: 80px;
+    }
+    @include mobile {
+      padding-bottom: 0;
+      background: white;
+    }
+    &::before {
+      content: "";
+      height: 1px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #3d3c3c;
+      opacity: 0.08;
+      right: 0;
+    }
+  }
+  &__social {
+    position: absolute;
+    bottom: 48px;
+    left: 59px;
+  }
+  &__info {
+    position: absolute;
+    right: 60px;
+    bottom: 21px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #ffffff;
+    opacity: 0.64;
+  }
+  &__box {
+    display: none;
+    position: absolute;
+    right: 80px;
+    background: #242424;
+    z-index: 1111;
+    left: 0;
+    padding-bottom: 71px;
+    &::before {
+      content: "";
+      height: 1px;
+      bottom: 71px;
+      left: 140px;
+      right: 0;
+      position: absolute;
+      background: #d9c287;
+      opacity: 0.24;
+    }
+  }
+  &::before {
+    content: url("../images/logo.svg");
+    position: absolute;
+    padding-top: 8px;
+    visibility: hide;
+    opacity: 0;
+    margin-left: 50px;
+    width: 66px;
+    left: 0;
+  }
+  &__slider {
+    min-width: 420px;
+    z-index: -1;
+  }
+  &--open {
+    background: #242424;
+    &::before {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.4s;
+    }
+    .navigation {
+      &__box {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__header {
+        &::before {
+          background-color: #c4c4c4;
+        }
+      }
+    }
+    .navigation-header {
+      &__logo {
+        opacity: 0;
+      }
+      &__lang {
+        opacity: 0;
+      }
+      &__info {
+        opacity: 0;
+      }
+      &__menu {
+        color: white;
+        margin-left: 164px;
+      }
+      &__button {
+      }
+    }
+  }
+}
+.navigation-header {
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+
+  letter-spacing: 0.08em;
+  &__phone {
+    @include mobile {
+      display: none;
+    }
+  }
+  &__toggle {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    &_open {
+      left: 0;
+      .navigation-header {
+        &__button {
+          &::before {
+            content: url("../images/icons/lines.svg");
+          }
+        }
+      }
+    }
+    &_close {
+      right: 0;
+      .navigation-header {
+        &__button {
+          &::before {
+            content: url("../images/icons/close.svg");
+          }
+        }
+      }
+    }
+  }
+  &__button {
+    &_close {
+      position: absolute;
+      right: 0;
+    }
+  }
+  &__menu {
+    display: flex;
+    margin-left: 140px;
+    margin-right: 77px;
+    text-transform: uppercase;
+    @include mobile {
+      display: none;
+    }
+  }
+  &__lang {
+    margin-left: auto;
+    margin-right: 0px;
+    @include mobile {
+      display: none;
+    }
+  }
+  &__link {
+    &:not(:first-child) {
+      margin-left: 64px;
+    }
+  }
+  &__info {
+    margin-right: 140px;
+    white-space: nowrap;
+
+    color: white;
+  }
+  &__login {
+    padding: 0;
+    position: relative;
+    color: white;
+    margin-right: 40px;
+    text-transform: uppercase;
+    margin-left: 179px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+
+    letter-spacing: 0.08em;
+    display: flex;
+    flex-direction: row-reverse;
+    @include mobile {
+      
+      margin: 0;
+    }
+  }
+  &__toggle {
+    background: #3d3c3c;
+  }
+  &__logo {
+    position: absolute;
+    z-index: 1111;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 56px;
+    @include mobile {
+      transform: none;
+      display: block;
+      position: static;
+    }
+    &::before {
+      content: url("../images/icons/stars.svg");
+      position: absolute;
+      top: 67px;
+      transform: translateY(-50%) translateX(-50%);
+      left: 50%;
+
+      padding-left: 8px;
+      padding-right: 7px;
+      background: white;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}
+
+.lang {
+  &__switcher {
+    color: rgba(0, 0, 0, 0.24);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height, or 171% */
+
+    letter-spacing: 0.08em;
+    &:first-child {
+      margin-right: 24px;
+    }
+    &--active {
+      color: $main-text-color;
+    }
+  }
+}
+
+.navigation-slider {
+  display: flex;
+  position: relative;
+  &__card {
+    height: 100%;
+  }
+  &__dots {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    z-index: 22;
+  }
+  &__dot {
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
+    &--active {
+      position: relative;
+      background: #d9c287;
+      &::before {
+        content: url("../images/dots-decorate.svg");
+        position: absolute;
+        bottom: -4px;
+        left: -4px;
+        height: 24px;
+        width: 24px;
+      }
+    }
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin: 0 2px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s;
+  }
+}
+.navigation-card {
+  position: relative;
+  height: 100%;
+  top: 1px;
+  &::before {
+    position: absolute;
+    content: url("../images/nav-banner-decorate.svg");
+    z-index: -1;
+    width: 360px;
+    height: 306px;
+    bottom: -1px;
+  }
+  &__banner {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+  }
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    padding-left: 40px;
+  }
+  &__title {
+    font-family: $accent-font;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 56px;
+  }
+  &__description {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  &__button {
+    margin-top: 25px;
+    margin-bottom: 40px;
+  }
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.login {
+  &__text {
+    display: block;
+    margin-left: 8px;
+
+    border-bottom: 1px white dashed;
+  }
+  &__icon {
+    display: block;
+    svg {
+      fill: white;
+    }
+    @include mobile {
+      svg {
+          fill: black;
+        
+        
+      }
+    }
+  }
+}

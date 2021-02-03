@@ -26,7 +26,7 @@ module.exports = {
       ],
     }),
     new HtmlWebpackPlugin({
-      template: paths.src + "/template.html", // template file
+      template: paths.src + "/template.pug", // template file
       filename: "index.html", // output file
     }),
   ],
@@ -50,7 +50,15 @@ module.exports = {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         use: [
           {
-            loader: "url-loader"
+            loader: "url-loader",
+          },
+        ],
+      },
+      {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: "pug-loader",
           },
         ],
       },

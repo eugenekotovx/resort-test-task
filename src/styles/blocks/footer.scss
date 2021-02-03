@@ -1,0 +1,32 @@
+.footer {
+  &__container {
+    padding-top: 150px;
+    position: relative;
+    padding-bottom: 103px;
+  }
+  &__img {
+    margin-bottom: 246px;
+    max-width: 100%;
+    width: 100%;
+    @include mobile {
+      display: none;
+    }
+  }
+  &__logo {
+    display: block;
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  &__tablet {
+    position: absolute;
+    bottom: 120px;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mobile {
+      display: none;
+    }
+  }
+}

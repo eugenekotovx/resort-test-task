@@ -1,0 +1,36 @@
+.weather {
+  color: white;
+@include mobile {
+  display: none;
+}
+
+  &__value {
+    font-size: 48px;
+    line-height: 56px;
+    position: relative;
+    &::before {
+      content: url("../images/icons/Cloudly.svg");
+      position: absolute;
+      left: -24px;
+      transform: translateX(-100%);
+    }
+  }
+  &__description {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 5px;
+  }
+  &__geo {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    &::before {
+      content: url("../images/icons/pin.png");
+      position: absolute;
+      left: -24px;
+      transform: translateX(-100%);
+    }
+  }
+}

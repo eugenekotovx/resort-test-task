@@ -1,0 +1,47 @@
+.social {
+  &__link {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.navigation-social {
+  &__icon {
+    svg {
+      path {
+        fill: #d9c287;
+      }
+    }
+  }
+  &__link {
+    border: 1px solid #d9c287;
+  }
+  &__link:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.header-social {
+  &__link {
+    margin-right: 0;
+    margin-left: auto;
+    position: relative;
+    background: white;
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 1px solid #d9c287;
+    }
+  }
+}

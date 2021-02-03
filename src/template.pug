@@ -1,0 +1,159 @@
+doctype html
+head
+  meta(charset="UTF-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible" content="ie=edge")
+html
+  body
+  include head.pug
+  div.decorate.decorate__flower
+    img(src="./images/flower.png")
+  header.header.header__wrapper
+    section.header__content
+      h2.header__title Family & Health Club
+      h1.header__label Mriya <br> Resort
+      h3.header__description Российский курорт для всей семьи на берегу черного моря
+      div.header-buttons__group
+        button.button.button_accent.header__button найти номер
+        button.button.button_primary 3d тур
+      button.button__arrow.button__arrow_down
+    div.header__info
+      div.header__social
+        a.social__link.header-social__link 
+          span.social__icon.header-social__icon
+            include images/icons/facebook.svg
+        a.social__link.header-social__link
+          span.social__icon.header-social__icon
+            include images/icons/twitter.svg
+        a.social__link.header-social__link
+          span.social__icon.header-social__icon
+            include images/icons/instagram.svg
+      div.weather.header-weather
+        h1.weather__value 27°
+        p.weather__description Облачно
+        span.weather__geo Ялта, Россия
+  section.choose
+    h1.choose__header Выберите свой отдых
+    div.choose__form
+      div.choose__selects
+        div.choose__select.choose__select_arrow.select Семейный отдых
+          select.choose-select__item
+        div.choose__select.choose__select_date.select пт, 8 мая — вс, 17 мая
+          select.choose-select__item
+        div.choose__select.choose__select_person.select 2 взрослых  •  без детей  •  1 номер
+          select.choose-select__item
+      button.choose-select__button Найти
+    div.choose__controls
+      div.choose__tabs
+        h2.choose__tab.choose__tab--active.js-choose__tab Спецпредложения
+        h2.choose__tab.js-choose__tab Афиша
+        h2.choose__tab.js-choose__tab Категории отдыха
+      div.choose-tab__controls
+        span.tab__arrow
+          include images/icons/choose_arrow_left.svg
+        span.tab__arrow
+          include images/icons/choose_arrow_right.svg
+    div.choose__cards.js-choose-tab__content.choose-tab__content.choose-tab__content--active
+      a.choose__card.choose-card
+        img.choose-card__img(src="./images/choose-card-1.png")
+        div.choose-card__content
+          span.choose-card__sale -20%
+          p.choose-card__description Для тех кто рядом
+      a.choose__card.choose-card
+        img.choose-card__img(src="./images/choose-card-2.png")
+        div.choose-card__content
+          span.choose-card__sale -10%
+          p.choose-card__description Раннее бронирование
+      a.choose__card.choose-card
+        img.choose-card__img(src="./images/choose-card-1.png")
+        div.choose-card__content
+          span.choose-card__sale -20%
+          p.choose-card__description Для тех кто рядом
+      a.choose__card.choose-card
+        img.choose-card__img(src="./images/choose-card-2.png")
+        div.choose-card__content
+          span.choose-card__sale -10%
+          p.choose-card__description Раннее бронирование
+    div.choose__cards.js-choose-tab__content.choose-tab__content.choose-tab__content
+      a.choose__card.choose-card
+        img.choose-card__img(src="./images/choose-card-1.png")
+        div.choose-card__content
+          span.choose-card__sale -20%
+          p.choose-card__description Для тех кто рядом 2
+      a.choose__card.choose-card
+        img.choose-card__img(src="./images/choose-card-2.png")
+        div.choose-card__content
+          span.choose-card__sale -10%
+          p.choose-card__description Раннее бронирование 2
+    div.choose__cards.js-choose-tab__content.choose-tab__content.choose-tab__content
+      a.choose__card.choose-card
+        img.choose-card__img(src="./images/choose-card-1.png")
+        div.choose-card__content
+          span.choose-card__sale -20%
+          p.choose-card__description Для тех кто рядом 3
+      a.choose__card.choose-card
+        img.choose-card__img(src="./images/choose-card-2.png")
+        div.choose-card__content
+          span.choose-card__sale -10%
+          p.choose-card__description Раннее бронирование 3
+  section.info.info__container.container
+    h1.info__title Mriya Resort & SPA — <br> <b> больше чем просто отдых </b>
+    span.info__logo.logo
+      include images/logo.svg
+    p.info__description В окружении необычного природного ландшафта курорт становится по настоящему уникальным. Это место идеально для тех, кто больше гор любит только море.
+    button.button.button_primary.info__button О комплексе
+  section.features.features__container
+    div.features__heading
+      h1.features__title Всё включено
+      div.features__controls.glide__arrows(data-glide-el="controls")
+        button.features__arrow.features__arrow_left.js-features-arrow--left
+        button.features__arrow.features__arrow_right.js-features-arrow--right
+    div.features__slider
+      div.features__slide.js-features-slide__item.fade
+        div.features__content
+          div.features__card.features__card_big
+            img.features-card__img(src="./images/features_big.png")
+            div.features-card__content
+              p.features-card__description Заниматесь в тренажерном зале и посещайте групповые тренировки
+              a.features-card__link Читать больше
+          div.features__card
+            div.features__description.features-description
+              h2.features-description__title Оздоровление
+              p.features-description__text Mriya Resort — это маленький город со множеством возможностей, каждый найдет себе занятие по вкусу
+            img.features-card__img(src="./images/features.png") 
+            div.features-card__content 
+              p.features-card__description Питаться в ресторане шведской линии согласно выбранному варианту
+              a.features-card__link Читать больше
+          div.features__card.features__card_important
+            img.features-card__img(src="./images/features_important.png") 
+            div.features-card__content
+              p.features-card__description Исследовать все общедоступные зоны и территории комплекса
+              a.features-card__link Читать больше
+      div.features__slide.js-features-slide__item.fade
+        div.features__content
+          div.features__card.features__card_big
+            img.features-card__img(src="./images/features_big.png")
+            div.features-card__content
+              p.features-card__description Заниматесь в тренажерном зале и посещайте групповые тренировки
+              a.features-card__link Читать больше
+          div.features__card
+            div.features__description.features-description
+              h2.features-description__title Оздоровление
+              p.features-description__text Mriya Resort — это маленький город со множеством возможностей, каждый найдет себе занятие по вкусу
+            img.features-card__img(src="./images/features.png") 
+            div.features-card__content 
+              p.features-card__description Питаться в ресторане шведской линии согласно выбранному варианту
+              a.features-card__link Читать больше
+          div.features__card.features__card_important
+            img.features-card__img(src="./images/features_important.png") 
+            div.features-card__content
+              p.features-card__description Исследовать все общедоступные зоны и территории комплекса
+              a.features-card__link Читать больше
+  footer.footer__container
+    img.footer__img(src="./images/mriya_resort.svg")
+    span.footer__logo
+      include images/logo.svg
+    img.footer__tablet(src="./images/tablet.png")
+      
+    
+        

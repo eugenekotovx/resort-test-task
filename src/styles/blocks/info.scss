@@ -1,0 +1,60 @@
+.info {
+  font-family: $accent-font;
+  position: relative;
+  &::before {
+    content: url('../images/decor1.png');
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+    z-index: -1;
+    @include mobile {
+      display: none;
+    }
+  }
+  &::after {
+    content: url('../images/decor2.png');
+    position: absolute;
+    right: 0;
+    top: 112px;
+    z-index: -1;
+    @include mobile {
+      display: none;
+    }
+  }
+  &__title {
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 56px;
+    b {
+      font-weight: 700;
+    }
+    &::before {
+      content: url('../images/info_wave.svg');
+      position: absolute;
+      left: 50%;
+      top: 51px;
+      transform: translateX(-50%);
+    }
+  }
+  &__description {
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 640px;
+    width: 100%;
+  }
+  &__container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 96px;
+    padding-top: 182px;
+  }
+  &__logo {
+    margin-top: 42px;
+    margin-bottom: 42px;
+  }
+  &__button {
+    margin-top: 38px;
+  }
+}

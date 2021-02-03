@@ -28,7 +28,9 @@
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "postcss-loader": "^4.0.4",
     "postcss-preset-env": "^6.7.0",
-    "sass-loader": "^10.0.3",
+    "pug": "^3.0.0",
+    "pug-loader": "^2.4.0",
+    "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
     "terser-webpack-plugin": "^5.0.0",
     "url-loader": "^4.1.1",
@@ -42,10 +44,13 @@
     "url": "git@github.com:eugenekotovx/nextGen-agency"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "axios": "^0.21.0",
     "jquery": "^3.5.1",
     "reset-css": "^5.0.1",
+    "sass": "^1.32.5",
     "scrollreveal": "^4.0.7",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "tiny-slider": "^2.9.3"
   }
 }

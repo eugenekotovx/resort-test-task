@@ -1,0 +1,25 @@
+.decorate {
+  position: absolute;
+  @include mobile {
+    display: none;
+  }
+  &__flower {
+    right: 0;
+    top: 0;
+    z-index: -1;
+    &::before {
+      content: url("../images/flower_stroke.svg");
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+    &::after {
+      content: url("../images/Intersect.svg");
+      position: absolute;
+      bottom: 12px;
+      right: 0;
+      z-index: 1;
+    }
+  }
+}

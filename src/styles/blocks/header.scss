@@ -1,0 +1,96 @@
+.header {
+  position: relative;
+  padding-top: 79px;
+  padding-bottom: 86px;
+  &::before {
+    content: url('../images/waves.svg');
+    position: absolute;
+    top: 24px;
+    left: 49px;
+    height: 32px;
+    width: 182px;
+    @include mobile {
+      left: -75px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 140px;
+    padding-right: 84px;
+    @include mobile {
+      padding: 0 16px;
+    }
+  }
+  &__content {
+    max-width: 440px;
+    width: 100%;
+    @include mobile {
+      margin-top: 79px;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+      margin-top: 121px;
+      justify-content: space-between;
+  }
+  &__social {
+    @include mobile {
+      display: none;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 47px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+  &__label {
+    font-size: 96px;
+    line-height: 96px;
+    margin-bottom: 41px;
+    margin-left: -5px;
+    font-family: $accent-font;
+    @include mobile {
+      margin-bottom: 28px;
+    }
+  }
+  &__description {
+    font-weight: 300;
+    font-size: $description-font-size;
+    line-height: 32px;
+    margin-bottom: 57px;
+    @include mobile {
+      margin-bottom: 39px;
+    }
+  }
+}
+
+.header-buttons {
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 96px;
+    @include mobile {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.header-weather {
+  padding-right: 117px;
+  margin-top: 186px;&::after {
+    position: absolute;
+    content: url("../images/weather_decorate.svg");
+    right: 281px;
+    bottom: -14px;
+    width: 439.35px;
+    height: 312.2px;
+  }
+}
